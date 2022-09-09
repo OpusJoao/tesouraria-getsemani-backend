@@ -4,8 +4,8 @@ import IPaymentsService from "../interface/IPaymentsService";
 
 export default class PaymentsService implements IPaymentsService{
   constructor(private readonly paymentsRepository: IPaymentsRepository){}
-  create(): Promise<IPayments> {
-    throw new Error("Method not implemented.");
+  create(payment: IPayments): Promise<IPayments> {
+    return this.paymentsRepository.create(payment)
   }
   findAById(idPayment: string): Promise<IPayments> {
     return this.paymentsRepository.findAById(idPayment)
