@@ -1,4 +1,4 @@
-import GetAllPaymentsController from "../controller/getAllPaymentsController";
+import GetAllPaymentsController from "../controller/payments/getAllPaymentsController";
 import MongoPaymentsRepository from "../repository/mongoPaymentRepository";
 import PaymentsService from "../service/paymentsService";
 
