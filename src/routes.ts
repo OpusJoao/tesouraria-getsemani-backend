@@ -1,5 +1,4 @@
 import { Router } from "express";
-import HealthCheckController from "./controller/healthcheckController";
 import { adaptRoute } from "./ adapter/expressRouterAdapter";
 import { makeGetAllPaymentsController } from "./factory/makeGetAllPaymentsController";
 import { makeHealthCheckController } from "./factory/makeHealthCheckController";
