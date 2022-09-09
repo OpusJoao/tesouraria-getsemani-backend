@@ -1,5 +1,5 @@
 export default interface IPayments {
-  id: String,
+  id?: String,
   title: String,
-  img: String 
+  img?: String
 }
