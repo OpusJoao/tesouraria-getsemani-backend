@@ -5,7 +5,8 @@ import IPaymentsService from "../interface/IPaymentsService";
 
 export default class GetAllPaymentsController implements ControllerInterface{
   constructor(private readonly paymentsService: IPaymentsService){}
-  handle(req: HttpRequest): HttpResponse{
-    return {statusCode: 200, body:{message: 'ok'}}
+  async handle(req: HttpRequest): Promise<HttpResponse>{
+    const payments = await this.paymentsService.findAll()
+    return {statusCode: 200, body:payments}
   }
 }
