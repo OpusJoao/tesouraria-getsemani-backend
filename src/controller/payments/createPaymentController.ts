@@ -5,6 +5,7 @@ import IPayments from "../../interface/IPayments";
 import PaymentsService from "../../service/paymentsService";
 
 export default class CreatePaymentController implements ControllerInterface{
+  public readonly name = 'CreatePaymentController'
   constructor(private readonly paymentService: PaymentsService){}
   handle(req: IHttpRequest): IHttpResponse | Promise<IHttpResponse> {
     const {title, img} = req.body
