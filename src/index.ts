@@ -1,9 +1,10 @@
 import express from 'express'
 import router from './routes'
 import mongoose from 'mongoose'
+import env from './config/env'
 const app = express()
 
-mongoose.connect('mongodb+srv://admin:F0JfqC4GrciQkdoK@treasury.lffsy4b.mongodb.net/?retryWrites=true&w=majority').then(()=>{
+mongoose.connect(env.mongoUrl).then(()=>{
   console.log(`[Server] Database connected successfully`)
 }).catch(e => {
   console.error(`[Server] Error while trying to connect database: `, {message: e?.message, stack: e?.stack})
