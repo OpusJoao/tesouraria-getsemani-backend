@@ -3,7 +3,7 @@ import router from './routes'
 import mongoose from 'mongoose'
 import env from './config/env'
 const app = express()
-
+app.use(express.json())
 mongoose.connect(env.mongoUrl).then(()=>{
   console.log(`[Server] Database connected successfully`)
 }).catch(e => {
