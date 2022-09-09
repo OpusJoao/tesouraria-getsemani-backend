@@ -7,8 +7,8 @@ export default class PaymentsService implements IPaymentsService{
   create(): Promise<IPayments> {
     throw new Error("Method not implemented.");
   }
-  findAById(): Promise<IPayments> {
-    throw new Error("Method not implemented.");
+  findAById(idPayment: string): Promise<IPayments> {
+    return this.paymentsRepository.findAById(idPayment)
   }
   update(): Promise<IPayments> {
     throw new Error("Method not implemented.");
