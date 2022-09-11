@@ -6,4 +6,5 @@ export default interface IPaymentsService{
   findAById(idPayment: String): Promise<IPayments>,
   update(): Promise<IPayments>,
   delete(): Promise<Boolean>,
+  isValid(paymentId: String): Promise<Boolean>
 }
