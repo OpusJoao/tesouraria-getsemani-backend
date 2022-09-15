@@ -9,6 +9,6 @@ export const makeGetPaymentInfoByPaymentId = () : GetPaymentInfoByPaymentId => {
   const paymentRepository = new MongoPaymentsRepository()
   const paymentService = new PaymentsService(paymentRepository)
   const paymentInfoRepository = new MongoPaymentsInfoRepository()
-  const paymentInfoService = new PaymentsInfoService(paymentInfoRepository)
+  const paymentInfoService = new PaymentsInfoService(paymentInfoRepository, paymentRepository)
   return new GetPaymentInfoByPaymentId(paymentInfoService, paymentService)
 }
