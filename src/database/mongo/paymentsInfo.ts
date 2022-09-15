@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 const PaymentsInfoSchema = new Schema({
+  paymentId: String,
   title: String,
   icon: String,
   treasurer: String,
