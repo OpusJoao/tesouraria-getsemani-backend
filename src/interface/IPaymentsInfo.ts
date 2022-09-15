@@ -1,20 +1,21 @@
 export default interface IPaymentsInfo {
-  title: String,
-  icon: String,
-  treasurer: String,
-  formatedPhone: String,
-  phone: String,
+  paymentId: string,
+  title: string,
+  icon: string,
+  treasurer: string,
+  formatedPhone: string,
+  phone: string,
   pix?: {
-    name: String,
+    name: string,
     value: Number,
-    bank: String,
-    code: String
+    bank: string,
+    code: string
   },
   ted?: {
-    name: String,
-    document: String,
+    name: string,
+    document: string,
     accountNumber: Number,
     agency: Number,
-    typeAccount: String
+    typeAccount: string
   }
 }
