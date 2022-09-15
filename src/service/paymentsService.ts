@@ -20,14 +20,8 @@ export default class PaymentsService implements IPaymentsService{
     return this.paymentsRepository.findAll()
   }
   isValid(paymentId: String): Promise<Boolean> {
-    return new Promise(async (resolve, reject) => {
-      const payment = await this.paymentsRepository.findAById(paymentId)
-
-      if(payment){
-        resolve(true)
-      }else {
-        reject(false)
-      }
+    return new Promise((resolve, reject) => {
+      this.paymentsRepository.findAById(paymentId).then(payment => resolve(true)).catch(()=>reject(false))
     })
   }
 }
