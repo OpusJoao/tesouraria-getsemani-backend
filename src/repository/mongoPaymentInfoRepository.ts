@@ -36,17 +36,17 @@ export default class MongoPaymentsInfoRepository implements IPaymentsInfoReposit
             formatedPhone: createdPaymentInfo?.formatedPhone || '',
             phone: createdPaymentInfo?.phone || '',
             pix: {
-              name: createdPaymentInfo?.phone || '',
-              value: createdPaymentInfo?.value || '',
-              bank: createdPaymentInfo?.bank || '',
-              code: createdPaymentInfo?.code || '',
+              name: createdPaymentInfo?.pix?.name || '',
+              value: createdPaymentInfo?.pix?.value || '',
+              bank: createdPaymentInfo?.pix?.bank || '',
+              code: createdPaymentInfo?.pix?.code || '',
             },
             ted: {
-              name: createdPaymentInfo?.name || '',
-              document: createdPaymentInfo?.document || '',
-              accountNumber: createdPaymentInfo?.accountNumber || '',
-              agency: createdPaymentInfo?.agency || '',
-              typeAccount: createdPaymentInfo?.typeAccount || '',
+              name: createdPaymentInfo?.ted?.name || '',
+              document: createdPaymentInfo?.ted?.document || '',
+              accountNumber: createdPaymentInfo?.ted?.accountNumber || '',
+              agency: createdPaymentInfo?.ted?.agency || '',
+              typeAccount: createdPaymentInfo?.ted?.typeAccount || '',
             }
           })
         }else{
