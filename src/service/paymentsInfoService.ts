@@ -22,14 +22,18 @@ export default class PaymentsInfoService implements IPaymentsInfoService{
   }
   async findByPaymentId(idPayment: string): Promise<IPaymentsInfo>{
     return new Promise(async (resolve, reject) => {
-        const payment = await this.paymentService.findAById(idPayment)
-        if(payment){
-          const paymentInfo = await this.paymentsInfoRepository.find({
-            paymentId : payment?.id
-          })
-          return resolve(paymentInfo[0])
-        }else{
-          return reject("Payment not found")
+        try{
+          const payment = await this.paymentService.findAById(idPayment)
+          if(payment){
+            const paymentInfo = await this.paymentsInfoRepository.find({
+              paymentId : payment?.id
+            })
+            return resolve(paymentInfo[0])
+          }else{
+            return reject("Payment not found")
+          }
+        }catch(e){
+          reject(e)
         }
     })
   }
