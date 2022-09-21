@@ -9,15 +9,15 @@ const PaymentsInfoSchema = new Schema({
   phone: String,
   pix: {
     name: String,
-    value: Number,
+    value: String,
     bank: String,
     code: String
   },
   ted: {
     name: String,
     document: String,
-    accountNumber: Number,
-    agency: Number,
+    accountNumber: String,
+    agency: String,
     typeAccount: String
   }
 },{

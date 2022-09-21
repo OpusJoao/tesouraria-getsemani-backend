@@ -7,15 +7,15 @@ export default interface IPaymentsInfo {
   phone: string,
   pix?: {
     name: string,
-    value: Number,
+    value: string,
     bank: string,
     code: string
   },
   ted?: {
     name: string,
     document: string,
-    accountNumber: Number,
-    agency: Number,
+    accountNumber: string,
+    agency: string,
     typeAccount: string
   }
 }
