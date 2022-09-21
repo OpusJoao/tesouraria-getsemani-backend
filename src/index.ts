@@ -2,6 +2,7 @@ import express from 'express'
 import router from './routes'
 import mongoose from 'mongoose'
 import env from './config/env'
+import config from './config/env'
 const app = express()
 app.use(express.json())
 mongoose.connect(env.mongoUrl).then(()=>{
@@ -11,6 +12,6 @@ mongoose.connect(env.mongoUrl).then(()=>{
 })
 
 app.use(router)
-app.listen(3000, ()=>{
-  console.log(`Server is running on port 3000`)
+app.listen(config.port, ()=>{
+  console.log(`Server is running on port ${config.port}`)
 })
