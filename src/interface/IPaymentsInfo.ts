@@ -2,6 +2,7 @@ export default interface IPaymentsInfo {
   paymentId: string,
   title: string,
   icon: string,
+  iconTitle: string,
   treasurer: string,
   formatedPhone: string,
   phone: string,

@@ -32,6 +32,7 @@ export default class MongoPaymentsInfoRepository implements IPaymentsInfoReposit
             paymentId: createdPaymentInfo?.paymentId || '',
             title: createdPaymentInfo?.title || '',
             icon: createdPaymentInfo?.icon || '',
+            iconTitle: createdPaymentInfo?.iconTitle || '',
             treasurer: createdPaymentInfo?.treasurer || '',
             formatedPhone: createdPaymentInfo?.formatedPhone || '',
             phone: createdPaymentInfo?.phone || '',

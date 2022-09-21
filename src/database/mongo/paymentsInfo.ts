@@ -4,6 +4,7 @@ const PaymentsInfoSchema = new Schema({
   paymentId: String,
   title: String,
   icon: String,
+  iconTitle: String,
   treasurer: String,
   formatedPhone: String,
   phone: String,
